@@ -19,17 +19,20 @@ body {
       /*filter: grayscale(100%);
       filter: url(#greyscale);
       filter: gray;*/
-      -webkit-transition: -webkit-filter 0.3s ease;
-      -moz-transition: -webkit-filter 0.3s ease;
-      -ms-transition: -webkit-filter 0.3s ease;
-      -o-transition: -webkit-filter 0.3s ease;
-      transition: -webkit-filter 0.3s ease; }
+      -webkit-transition: border-radius 0.3s, -webkit-filter 0.3s, box-shadow 0.3s, transform 0.3s;
+      -moz-transition: border-radius 0.3s, -webkit-filter 0.3s, box-shadow 0.3s, transform 0.3s;
+      -ms-transition: border-radius 0.3s, -webkit-filter 0.3s, box-shadow 0.3s, transform 0.3s;
+      -o-transition: border-radius 0.3s, -webkit-filter 0.3s, box-shadow 0.3s, transform 0.3s;
+      transition: border-radius 0.3s, -webkit-filter 0.3s, box-shadow 0.3s, transform 0.3s; }
       #team-members .member img:hover {
         /*-webkit-filter: grayscale(0);*/
         -webkit-filter: grayscale(0%);
         /*filter: grayscale(0%);
         filter: url(#greyscale);
-        filter: gray;*/ }
+        filter: gray;*/
+        border-radius: 15px;
+        box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        transform: rotate(-3deg); }
     #team-members .member div.name {
       text-align: center; }
 

@@ -37,7 +37,7 @@ body {
       filter: url(#greyscale);
       filter: gray;*/
 
-      @include transition(-webkit-filter .3s ease);
+      @include transition(border-radius .3s, -webkit-filter .3s, box-shadow .3s, transform .3s);
 
       &:hover {
         /*-webkit-filter: grayscale(0);*/
@@ -45,6 +45,12 @@ body {
         /*filter: grayscale(0%);
         filter: url(#greyscale);
         filter: gray;*/
+
+        border-radius: 15px;
+
+        box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+        transform: rotate(-3deg);
       }
     }
 
