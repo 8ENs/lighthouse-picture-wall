@@ -1,9 +1,17 @@
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
 $font-stack: Verdana, sans-serif;
 $primaryColor: #FF0000;
 
 body {
   font-family: $font-stack;
-  font-size: 1.5em;
+  font-size: 1em;
 
   h1 {
     color: $primaryColor; 
@@ -22,6 +30,22 @@ body {
     img {
       width: 200px;
       height: 200px;
+
+      /*-webkit-filter: grayscale(1);*/
+      -webkit-filter: grayscale(100%);
+      /*filter: grayscale(100%);
+      filter: url(#greyscale);
+      filter: gray;*/
+
+      @include transition(-webkit-filter .3s ease);
+
+      &:hover {
+        /*-webkit-filter: grayscale(0);*/
+        -webkit-filter: grayscale(0%);
+        /*filter: grayscale(0%);
+        filter: url(#greyscale);
+        filter: gray;*/
+      }
     }
 
     div.name {
